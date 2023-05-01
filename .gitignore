@@ -1,0 +1,24 @@
+#IDE
+.vscode/
+.idea/
+
+
+# Byte-compiled
+__pycache__/
+*.pyc
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Environments
+env/
+.DS_Store
+venv/
+.env
+environment.env
+
+.bash_history
+.cache
+run.py

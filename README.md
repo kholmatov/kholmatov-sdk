@@ -3,16 +3,19 @@
 The Lord Of The Rings SDK is a Python client for The One API. It provides a simple and convenient way to interact with the API, supporting pagination, sorting, and filtering options for making requests.
 
 ## Installation
-If you've published your SDK to PyPI, it can be installed with pip, like so:
-```bash
-pip install kholmatov-sdk
-```
-
-If the SDK is not on PyPI and you want to install it directly from the source code, you can do so with pip as well. Navigate to the root directory of the SDK source code (the directory containing setup.py), and run:
+Install it directly from the source code, you can do so with pip as well. Navigate to the root directory of the SDK source code (the directory containing setup.py), and run:
 
 ```bash
 pip install .
 ```
+
+[//]: # (Only after the published SDK to PyPI, it can be installed with pip, like so:)
+
+[//]: # (```bash)
+
+[//]: # (pip install kholmatov-sdk)
+
+[//]: # (```)
 
 ## Usage
 
@@ -80,21 +83,15 @@ movies = client.get_movies(runtimeInMinutes=('>=', 160))
 ```
 ## Testing
 
-The SDK includes a suite of unit tests that you can run to verify its functionality on your system. These tests make use of the `unittest` module from Python's standard library, and they're designed to assert the correctness of the SDK's various features.
+The SDK includes a suite of unit tests that you can run to verify its functionality on your system. These tests make use of the `unittest` module from Python's standard library, and they're designed to assert the correctness of the SDK's various features. 
 
-To run the tests, you'll first need to install the necessary dependencies, which are listed in the `requirements_test.txt` file. You can install these dependencies with the following command:
-
-```bash
-pip install -r requirements_test.txt
-```
-
-Once you have the necessary dependencies installed, you can run the tests with the following command:
+You can run the tests with the following command:
 
 ```bash
 python -m unittest discover
 ```
 
-This command tells Python to run the `unittest` test discovery, which will find the tests in your `test` directory and run them all.
+This command tells Python to run the `unittest` test discovery, which will find the tests in `tests` directory and run them all.
 
 The tests make use of the `unittest.mock.patch` function to replace the `requests.get` function with a mock. This allows the tests to simulate HTTP responses from the API without making actual requests. Instead of receiving data from the API, the tests use locally stored "mock" data.
 
@@ -116,7 +113,7 @@ Please note that you will need to replace the `api_key` placeholder in the tests
 
 ---
 
-Remember to replace any specific details (like file paths or directory names) with those that are accurate for your SDK.
+Remember to replace any specific details (like file paths or directory names) with those that are accurate for this SDK.
 
 ## Contributing
 

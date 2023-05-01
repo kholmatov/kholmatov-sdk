@@ -125,6 +125,16 @@ class Client:
                     params.append(f'{key}={value}')
         if params:
             url += '?' + '&'.join(params)
-        response = requests.get(url, headers=headers)
-        response.raise_for_status()
-        return response.json()
+
+        try:
+            response = requests.get(url, headers=headers)
+            response.raise_for_status()
+            return response.json()
+        except requests.exceptions.HTTPError as err:
+            raise Exception(f"HTTP Error: {err}") from err
+        except requests.exceptions.ConnectionError as err:
+            raise Exception(f"Connection Error: {err}") from err
+        except requests.exceptions.Timeout as err:
+            raise Exception(f"Timeout Error: {err}") from err
+        except requests.exceptions.RequestException as err:
+            raise Exception(f"Something went wrong: {err}") from err

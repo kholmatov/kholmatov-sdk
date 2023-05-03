@@ -1,6 +1,6 @@
 # Lord Of The Rings SDK
 
-The Lord Of The Rings SDK is a Python client for The One API. It provides a simple and convenient way to interact with the API, supporting pagination, sorting, and filtering options for making requests.
+The Lord Of The Rings SDK is a Python client for [The One API](https://the-one-api.dev/). It provides a simple and convenient way to interact with the API, supporting pagination, sorting, and filtering options for making requests.
 
 ## Requirements
 

@@ -6,7 +6,6 @@ setup(
     description='A Python SDK for the Lord of the Rings API',
     packages=find_packages(),
     install_requires=[
-        'requests',
-        'requests_mock'
+        'requests'
     ],
 )

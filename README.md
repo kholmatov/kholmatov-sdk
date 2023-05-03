@@ -2,20 +2,19 @@
 
 The Lord Of The Rings SDK is a Python client for The One API. It provides a simple and convenient way to interact with the API, supporting pagination, sorting, and filtering options for making requests.
 
+## Requirements
+
+- Python 3.10.10
+- Requests library
+
+Please note that this SDK has been tested and developed using Python 3.10.10. While it may work with other Python versions, compatibility is not guaranteed.
+
 ## Installation
 Install it directly from the source code, you can do so with pip as well. Navigate to the root directory of the SDK source code (the directory containing setup.py), and run:
 
 ```bash
 pip install .
 ```
-
-[//]: # (Only after the published SDK to PyPI, it can be installed with pip, like so:)
-
-[//]: # (```bash)
-
-[//]: # (pip install kholmatov-sdk)
-
-[//]: # (```)
 
 ## Usage
 
@@ -76,7 +75,6 @@ movies = client.get_movies(name='/Ring/i')
 movies = client.get_movies(name=('!=', '/Ring/i'))
 
 # Comparison operations
-
 movies = client.get_movies(budgetInMillions=('<', 100))
 movies = client.get_movies(academyAwardWins=('>', 0))
 movies = client.get_movies(runtimeInMinutes=('>=', 160))
